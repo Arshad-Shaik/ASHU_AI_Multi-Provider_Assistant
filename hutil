@@ -1,0 +1,67 @@
+[33mcommit aa7e7cb5b227e53af2a272b953ae01843493b2ac[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Arshad-Shaik <arshadshaik641@gmail.com>
+Date:   Tue Sep 15 18:52:28 2026 +0530
+
+    deploy: ASHU AI Assistant backend v2.0 - FastAPI Python 3.14 with 13-provider LLM router
+
+ hf-backend/Dockerfile                              |  37 [32m+++[m
+ hf-backend/app/__init__.py                         |   0
+ hf-backend/app/core/__init__.py                    |   0
+ hf-backend/app/core/config.py                      | 191 [32m+++++++++++++++[m
+ hf-backend/app/core/identity.py                    |  24 [32m++[m
+ hf-backend/app/core/limiter.py                     |  82 [32m+++++++[m
+ hf-backend/app/core/middleware.py                  | 108 [32m+++++++++[m
+ hf-backend/app/core/security.py                    |  72 [32m++++++[m
+ hf-backend/app/core/supabase.py                    |  20 [32m++[m
+ hf-backend/app/main.py                             |  66 [32m++++++[m
+ hf-backend/app/models/__init__.py                  |   0
+ hf-backend/app/models/database.py                  |  42 [32m++++[m
+ hf-backend/app/models/request.py                   |  70 [32m++++++[m
+ hf-backend/app/models/response.py                  |  73 [32m++++++[m
+ hf-backend/app/routers/__init__.py                 |   0
+ hf-backend/app/routers/analytics.py                |  22 [32m++[m
+ hf-backend/app/routers/auth.py                     |  16 [32m++[m
+ hf-backend/app/routers/chat.py                     | 130 [32m+++++++++++[m
+ hf-backend/app/routers/commands.py                 | 259 [32m+++++++++++++++++++++[m
+ hf-backend/app/routers/health.py                   |  56 [32m+++++[m
+ hf-backend/app/routers/memory.py                   |  43 [32m++++[m
+ hf-backend/app/services/__init__.py                |   0
+ hf-backend/app/services/ai_router.py               |  61 [32m+++++[m
+ hf-backend/app/services/analytics/__init__.py      |   0
+ hf-backend/app/services/analytics/tracker.py       | 168 [32m+++++++++++++[m
+ hf-backend/app/services/auth/__init__.py           |  14 [32m++[m
+ hf-backend/app/services/auth/supabase_auth.py      | 110 [32m+++++++++[m
+ hf-backend/app/services/commands/__init__.py       |   0
+ hf-backend/app/services/commands/at_command.py     |  29 [32m+++[m
+ hf-backend/app/services/commands/dollar_command.py |  30 [32m+++[m
+ hf-backend/app/services/commands/hash_command.py   |  21 [32m++[m
+ hf-backend/app/services/commands/star_command.py   |  52 [32m+++++[m
+ hf-backend/app/services/llm/__init__.py            |   0
+ hf-backend/app/services/llm/base.py                |  27 [32m+++[m
+ hf-backend/app/services/llm/providers/__init__.py  |   0
+ .../services/llm/providers/cerebras_provider.py    |  21 [32m++[m
+ .../app/services/llm/providers/claude_provider.py  |  21 [32m++[m
+ .../services/llm/providers/cloudflare_provider.py  |  22 [32m++[m
+ .../app/services/llm/providers/cohere_provider.py  |  84 [32m+++++++[m
+ .../services/llm/providers/deepseek_provider.py    |  21 [32m++[m
+ hf-backend/app/services/llm/providers/gemini.py    | 117 [32m++++++++++[m
+ .../app/services/llm/providers/grok_provider.py    |  22 [32m++[m
+ .../app/services/llm/providers/groq_provider.py    |  79 [32m+++++++[m
+ .../services/llm/providers/huggingface_provider.py |  21 [32m++[m
+ .../app/services/llm/providers/mistral_provider.py |  82 [32m+++++++[m
+ .../app/services/llm/providers/openai_provider.py  |  80 [32m+++++++[m
+ .../services/llm/providers/openrouter_provider.py  | 126 [32m++++++++++[m
+ .../services/llm/providers/together_provider.py    |  21 [32m++[m
+ hf-backend/app/services/llm/router.py              | 133 [32m+++++++++++[m
+ hf-backend/app/services/memory/__init__.py         |   0
+ hf-backend/app/services/memory/conversation.py     | 180 [32m++++++++++++++[m
+ .../app/services/memory/conversation_logger.py     | 178 [32m++++++++++++++[m
+ hf-backend/app/services/memory/id_generator.py     |  26 [32m+++[m
+ hf-backend/app/services/memory/manager.py          |  90 [32m+++++++[m
+ hf-backend/app/utils/__init__.py                   |   0
+ hf-backend/app/utils/circuit_breaker.py            |  68 [32m++++++[m
+ hf-backend/app/utils/command_types.py              |  11 [32m+[m
+ hf-backend/app/utils/retry.py                      |  18 [32m++[m
+ hf-backend/app/utils/sanitizer.py                  |  25 [32m++[m
+ hf-backend/requirements.txt                        |  24 [32m++[m
+ 60 files changed, 3293 insertions(+)
