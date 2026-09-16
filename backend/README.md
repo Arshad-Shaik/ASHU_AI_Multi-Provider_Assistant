@@ -167,7 +167,7 @@ A circuit opening on one provider does not affect any other provider.
 
     Layer   Protection
     +-------+---------------------------------------------------+
-    | 1     | HTTPS transport enforced by HuggingFace Spaces    |
+    | 1     | HTTPS transport enforced by Render and Cloudflare |
     | 2     | CORS allowlist from FRONTEND_URL environment var  |
     | 3     | Rate limiting 60 per minute 500 per hour per IP   |
     | 4     | Supabase JWT verification on every protected route|
@@ -282,28 +282,33 @@ Step 5 - Verify health check:
 Step 6 - Check provider status:
     http://localhost:8000/api/v1/health/providers
 
+Production health check:
+    https://aws-ashu-ai-assistant-backend.onrender.com/api/v1/health
+    https://aws-ashu-ai-assistant-backend.onrender.com/api/v1/health/providers
+
 ---
 
 ## Docker Build
 
     docker build -t ashu-ai-backend .
-    docker run -p 7860:7860 --env-file .env ashu-ai-backend
+    docker run -p 8000:8000 --env-file .env ashu-ai-backend
 
 Container runs as non-root user ashuai with UID 1001.
-Base image: python:3.14-slim for minimal attack surface.
-Exposes port 7860 for HuggingFace Spaces compatibility.
+Base image: python:3.12-slim for minimal attack surface.
+Exposes port 8000 for Render deployment compatibility.
 
 ---
 
 ## Production Deployment
 
-Deploy to HuggingFace Spaces:
+Deploy to Render:
 
-Step 1 - Create a new Space on HuggingFace with Docker SDK.
-Step 2 - Push backend directory to Space git repository.
-Step 3 - Add all environment variables as Space Secrets.
-Step 4 - HuggingFace builds and runs the Docker container automatically.
-Step 5 - Space URL becomes your NEXT_PUBLIC_BACKEND_URL for Vercel.
+Step 1 - Go to render.com and create a new Web Service.
+Step 2 - Connect GitHub repository ASHU-AI-Assistant.
+Step 3 - Set Root Directory to backend and Runtime to Docker.
+Step 4 - Add all environment variables in Render dashboard.
+Step 5 - Render builds and deploys automatically.
+Step 6 - Production URL: https://aws-ashu-ai-assistant-backend.onrender.com
 
 ---
 

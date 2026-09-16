@@ -224,6 +224,10 @@ Create frontend/.env.local with these values:
     NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
     NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 
+Production values:
+    NEXT_PUBLIC_BACKEND_URL=https://aws-ashu-ai-assistant-backend.onrender.com
+    NEXT_PUBLIC_APP_URL=https://aws-ashu-ai-assistant-frontend.vercel.app
+
 ---
 
 ## Local Development

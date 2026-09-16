@@ -15,7 +15,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-3178C6?style=for-the-badge&logo=typescript)](https://typescriptlang.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-[Live Demo](https://your-vercel-url.vercel.app) | [Backend API](https://your-hf-space.hf.space) | [API Docs](https://your-hf-space.hf.space/docs) | [Architecture](ARCHITECTURE.md)
+[Live Demo](https://aws-ashu-ai-assistant-frontend.vercel.app) | [Backend API](https://aws-ashu-ai-assistant-backend.onrender.com) | [API Docs](https://aws-ashu-ai-assistant-backend.onrender.com/docs) | [Architecture](ARCHITECTURE.md)
 
 </div>
 
@@ -581,6 +581,10 @@ database/migrations/005_user_command_stats.sql
 ```bash
 curl http://localhost:8000/api/v1/health
 curl http://localhost:8000/api/v1/health/providers
+
+Production:
+curl https://aws-ashu-ai-assistant-backend.onrender.com/api/v1/health
+curl https://aws-ashu-ai-assistant-backend.onrender.com/api/v1/health/providers
 ```
 
 Expected health response:
@@ -631,7 +635,7 @@ Expected health response:
 ## Backend API Reference
 
 Base URL local: http://localhost:8000/api/v1
-Base URL production: https://your-hf-space.hf.space/api/v1
+Base URL production: https://aws-ashu-ai-assistant-backend.onrender.com/api/v1
 
 | Method | Endpoint | Auth Required | Description |
 |---|---|---|---|
@@ -808,13 +812,13 @@ Steps:
 
 After Vercel deployment, add to Supabase Dashboard - Authentication - URL Configuration:
 
-Site URL: https://your-vercel-app.vercel.app
+Site URL: https://aws-ashu-ai-assistant-frontend.vercel.app
 
 Redirect URLs:
 
 ```
-https://your-vercel-app.vercel.app/auth/callback
-https://your-vercel-app.vercel.app/**
+https://aws-ashu-ai-assistant-frontend.vercel.app/auth/callback
+https://aws-ashu-ai-assistant-frontend.vercel.app/**
 ```
 
 Enable in Supabase Auth providers:
