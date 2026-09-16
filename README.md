@@ -15,7 +15,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-3178C6?style=for-the-badge&logo=typescript)](https://typescriptlang.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-[Live Demo](https://aws-ashu-ai-assistant-frontend.vercel.app) | [Backend API](https://aws-ashu-ai-assistant-backend.onrender.com) | [API Docs](https://aws-ashu-ai-assistant-backend.onrender.com/docs) | [Architecture](ARCHITECTURE.md)
+[Live Demo](https://aws-ashu-ai-assistant-frontend.vercel.app) | [Backend API](https://aws-ashu-ai-assistant-backend.onrender.com/api/v1/health) | [API Docs](https://aws-ashu-ai-assistant-backend.onrender.com/docs) | [Architecture](ARCHITECTURE.md)
 
 </div>
 
