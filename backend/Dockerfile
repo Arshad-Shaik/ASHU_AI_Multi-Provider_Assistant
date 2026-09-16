@@ -24,8 +24,8 @@ RUN pip install --no-cache-dir --upgrade pip==26.1.2 \
 
 COPY --chown=ashuai:ashuai . .
 
-RUN chmod -R 755 /app \
-    && chmod -R 644 /app/app
+RUN find /app -type d -exec chmod 755 {} + \
+    && find /app -type f -name '*.py' -exec chmod 644 {} +
 
 USER ashuai
 
