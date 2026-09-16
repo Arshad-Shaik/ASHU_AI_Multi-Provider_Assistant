@@ -301,14 +301,14 @@ Exposes port 8000 for Render deployment compatibility.
 
 ## Production Deployment
 
-Deploy to Render:
+**Deploy to Render:**
 
-Step 1 - Go to render.com and create a new Web Service.
-Step 2 - Connect GitHub repository ASHU-AI-Assistant.
-Step 3 - Set Root Directory to backend and Runtime to Docker.
-Step 4 - Add all environment variables in Render dashboard.
-Step 5 - Render builds and deploys automatically.
-Step 6 - Production URL: https://aws-ashu-ai-assistant-backend.onrender.com
+- Step 1 - Go to render.com and create a new Web Service.
+- Step 2 - Connect GitHub repository ASHU-AI-Assistant.
+- Step 3 - Set Root Directory to backend and Runtime to Docker.
+- Step 4 - Add all environment variables in Render dashboard.
+- Step 5 - Render builds and deploys automatically.
+- Step 6 - Production URL: https://aws-ashu-ai-assistant-backend.onrender.com
 
 ---
 
