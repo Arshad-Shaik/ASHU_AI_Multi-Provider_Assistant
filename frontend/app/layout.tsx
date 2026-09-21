@@ -35,7 +35,7 @@ const developerName = "AWS - Arshad Wasib Shaik";
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
   title: {
-    default: "𝗔𝗦𝗛𝗨 𝗔𝗜 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 (𝗔dvanced𝗦ystem𝗛olographic𝗨nified Artificial Intelligence Multi⚡Provider Assistant)",
+    default: "𝗔𝗦𝗛𝗨 𝗔𝗜 𝗠𝘂𝗹𝘁𝗶⚡𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗿 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁",
     template: "%s | ASHU AI Terminal",
   },
   description:
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: appUrl,
-    title: "𝗔𝗦𝗛𝗨 𝗔𝗜 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 (𝗔dvanced𝗦ystem𝗛olographic𝗨nified Artificial Intelligence Multi⚡Provider Assistant)",
+    title: "𝗔𝗦𝗛𝗨 𝗔𝗜 𝗠𝘂𝗹𝘁𝗶⚡𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗿 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁",
     description:
       "Multi-provider AI terminal with Iron Man Jarvis holographic interface, voice commands, and intelligent 13-provider fallback routing.",
     siteName: "ASHU AI",
