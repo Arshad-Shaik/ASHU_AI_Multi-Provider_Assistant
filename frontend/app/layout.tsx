@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ASHU AI — Advanced Holographic AI Terminal",
+    title: "𝗔𝗦𝗛𝗨 𝗔𝗜 𝗠𝘂𝗹𝘁𝗶⚡𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗿 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁",
     description:
       "Multi-provider AI terminal with Iron Man Jarvis holographic interface, voice commands, and intelligent 13-provider fallback routing.",
     creator: `@arshadwasibshaik`,
